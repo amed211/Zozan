@@ -9,4 +9,5 @@ class ProcessController {
 public:
     bool suspendProcess(int pid);
     bool resumeProcess(int pid);
+    bool terminateProcess(int pid);
 };
