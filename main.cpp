@@ -27,23 +27,25 @@ int main() {
 
         for (int pid : newShells) {
             if (whitelist.isWhitelisted(pid)) {
-                cout << "[✓] PID " << pid << " zaten izinli, işlem devam ediyor.\n";
+                cout << "[✓] PID " << pid << " zaten izinli.\n";
                 continue;
             }
 
             cout << "[!] Yeni shell işlemi tespit edildi (PID: " << pid << ")\n";
 
-            // İşlemi askıya al
             if (controller.suspendProcess(pid)) {
-                // Kullanıcıdan onay al
-                if (alert.promptUser("shell", pid)) {
+                auto result = alert.promptUser("shell", pid);
+
+                if (result == AlertSystem::UserResponse::Allow) {
                     whitelist.addToWhitelist(pid);
                     controller.resumeProcess(pid);
+                    cout << "[+] Kullanıcı izin verdi, işlem devam etti.\n";
                 } else {
-                    cout << "[x] Kullanıcı işlemi reddetti, işlem askıda kalacak.\n";
+                    controller.terminateProcess(pid);
+                    cout << "[x] İşlem sonlandırıldı (kullanıcı ret veya zaman aşımı).\n";
                 }
             } else {
-                cout << "[!] İşlem askıya alınamadı, muhtemelen yetki yetersiz.\n";
+                cout << "[!] İşlem askıya alınamadı.\n";
             }
         }
 
