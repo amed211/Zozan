@@ -60,3 +60,19 @@ bool ProcessController::resumeProcess(int pid) {
     cout << "[*] PID " << pid << " yeniden çalıştırıldı.\n";
     return true;
 }
+
+bool ProcessController::terminateProcess(int pid) { // Bu bölüm sonradan eklendi
+    HANDLE hProcess = OpenProcess(PROCESS_TERMINATE, FALSE, pid);
+    if (hProcess == NULL) return false;
+
+    BOOL result = TerminateProcess(hProcess, 1);
+    CloseHandle(hProcess);
+
+    return result;
+}
+    } while (Thread32Next(hThreadSnap, &te));
+
+    CloseHandle(hThreadSnap);
+    cout << "[*] PID " << pid << " yeniden çalıştırıldı.\n";
+    return true;
+}
