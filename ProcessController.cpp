@@ -61,7 +61,7 @@ bool ProcessController::resumeProcess(int pid) {
     return true;
 }
 
-bool ProcessController::terminateProcess(int pid) { // Bu bölüm sonradan eklendi
+bool ProcessController::terminateProcess(int pid) {
     HANDLE hProcess = OpenProcess(PROCESS_TERMINATE, FALSE, pid);
     if (hProcess == NULL) return false;
 
