@@ -6,3 +6,9 @@ This program is an improved iteration of the beta version, and active developmen
 Zozan.exe blocks commands. Zozan2DG.exe encrypts your data with AES, keeping your private files secure, and also acts as a file explorer, allowing only you to view your encrypted data within the folder 
 
 WARNING: The encryption algorithm isn't working as intended yet; do not use it outside of test purposes. The program is a beta version and still has deficiencies and bugs. All encryption errors are due to the OK.zoz file. DO NOT DELETE OR MODIFY THE FILE.
+
+
+
+
+https://github.com/user-attachments/assets/d7104793-7a03-4940-b55a-fd81c9ccd911
+
