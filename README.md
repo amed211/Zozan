@@ -12,3 +12,5 @@ WARNING: The encryption algorithm isn't working as intended yet; do not use it o
 
 https://github.com/user-attachments/assets/d7104793-7a03-4940-b55a-fd81c9ccd911
 
+
+Zozan2DG.exe has been modified in accordance with feedback. A loading screen will now appear during the encryption and decryption phases.
