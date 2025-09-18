@@ -30,6 +30,7 @@ Module 3's programming process is currently suspended. Module 4 is not yet compl
 ## Frequently Asked Questions
 
 **Q: QurZen1.exe is flagged as suspicious on VirusTotal**
+
 **A:** QurZen is an unsigned program that monitors all system processes and can intervene, causing it to be flagged as suspicious. Users can test it in virtual machines if desired.
 
 **Q: QurZen1.exe module keeps giving warnings**
