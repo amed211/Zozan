@@ -1,3 +1,5 @@
+# Project is detected as a virus by VirusTotal. This is, of course, a false positive. However, to avoid damaging security perception and users’ trust in the program, the software has been temporarily taken down until the issue is resolved. For more information, you can contact us via the email address below.
+
 # QurZen Framework - Beta Version 1
 
 QurZen is an internal security system framework currently under development to protect against malware. It features a modular architecture, ensuring that if one module is terminated, other modules continue to operate, significantly complicating attack processes.
